@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.29.0)
+project(Tivat_Survivor_Continent
+    VERSION 0.0.1
+    DESCRIPTION "a demo of cmake planning"
+    HOMEPAGE_URL "https://github.com/AySagili/Tivat_Survivor_Continent"
+    LANGUAGE CXX
+)
+
+
+set(CMAKE_CXX_STANDARD 17)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+set(PROCESS_DIR ${CMAKE_SOURCE_DIR}/src/process)
+set(PNC_MAP_DIR ${CMAKE_SOURCE_DIR}/src/pnc_map)
+add_executable(src)
