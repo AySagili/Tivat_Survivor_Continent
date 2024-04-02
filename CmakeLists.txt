@@ -11,4 +11,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set(PROCESS_DIR ${CMAKE_SOURCE_DIR}/src/process)
 set(PNC_MAP_DIR ${CMAKE_SOURCE_DIR}/src/pnc_map)
+
+# 第三方库
+set(EASYX_PATH ${CMAKE_SOURCE_DIR}/third_party/easyx)
+
 add_subdirectory(src)
