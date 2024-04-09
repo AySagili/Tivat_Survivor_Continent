@@ -1,0 +1,21 @@
+project(Tivat_Survivor_Continent)
+
+set(TIvat_Survivor_Continent_Inlcude
+    ./Tivat_Surivivor_Continent.h
+)
+set(TIvat_Survivor_Continent_Src
+    Tivat_Surivivor_Continent.cpp
+)
+set(TIvat_Survivor_Continent_Lib
+    easyx
+)
+
+add_library(${PROJECT_NAME}
+    SHARED
+    Tivat_Survivor_Continent.cpp
+)
+
+target_link_libraries(${PROJECT_NAME}
+    PUBLIC
+    ${TIvat_Survivor_Continent_Lib}
+)
