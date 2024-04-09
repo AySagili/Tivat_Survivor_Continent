@@ -8,9 +8,10 @@ project(Tivat_Survivor_Continent
 
 set(CMAKE_CXX_STANDARD 17)
 
-# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
-# set(PROCESS_DIR ${CMAKE_SOURCE_DIR}/src/process)
-# set(PNC_MAP_DIR ${CMAKE_SOURCE_DIR}/src/pnc_map)
+ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+ set(PROCESS_DIR ${CMAKE_SOURCE_DIR}/src/process)
+set(PNC_MAP_DIR ${CMAKE_SOURCE_DIR}/src/pnc_map)
+set(TIVAT_SURVIVOR_CONTINENT_DIR ${CMAKE_SOURCE_DIR}/src/Tivat_Survivor_Continent)
 
 # 第三方库
 set(EASYX_PATH ${CMAKE_SOURCE_DIR}/third_party/easyx)

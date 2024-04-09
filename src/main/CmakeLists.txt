@@ -12,5 +12,9 @@ target_link_libraries(${PROJECT_NAME}
     process
 )
 
+target_link_libraries(${PROJECT_NAME}
+PUBLIC
+Tivat_Survivor_Continent
+)
 
 

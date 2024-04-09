@@ -6,7 +6,7 @@ INTERFACE
 
 target_include_directories(${PROJECT_NAME}
 INTERFACE
-easyx.h
+${EASYX_PATH}
 )
 
 target_link_libraries(${PROJECT_NAME}

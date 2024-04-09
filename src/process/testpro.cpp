@@ -1,6 +1,6 @@
-#include "pnc_map.h"
+#include "testpro.h"
 
-void test()
+void test2()
 {
 
     std::cout << "Test1" << '\n';

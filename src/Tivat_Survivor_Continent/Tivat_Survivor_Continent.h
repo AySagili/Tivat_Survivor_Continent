@@ -11,7 +11,6 @@
 #include <mmsystem.h>
 
 #endif // !TEST_H
-#pragma comment(lib, "Winmm.lib")
 void putimage_alpha(int x, int y, IMAGE *image);
 
 class Atlas

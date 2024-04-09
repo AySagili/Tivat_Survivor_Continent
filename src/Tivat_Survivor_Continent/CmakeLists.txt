@@ -1,19 +1,18 @@
 project(Tivat_Survivor_Continent)
 
-
-
 add_library(${PROJECT_NAME}
     SHARED
     Tivat_Survivor_Continent.cpp
 )
+
 target_include_directories(${PROJECT_NAME}
 PUBLIC
-${EASYX_PATH}
+${TIVAT_SURVIVOR_CONTINENT_DIR}
 )
+
 target_link_libraries(${PROJECT_NAME}
 PUBLIC
 easyx
-libwinmm.a
+Winmm.lib
 Msimg32.lib
-
 )
