@@ -6,13 +6,15 @@ add_library(${PROJECT_NAME}
 )
 
 target_include_directories(${PROJECT_NAME}
-PUBLIC
-${TIVAT_SURVIVOR_CONTINENT_DIR}
+    PUBLIC
+    ${TIVAT_SURVIVOR_CONTINENT_DIR}
 )
 
 target_link_libraries(${PROJECT_NAME}
-PUBLIC
-easyx
-Winmm.lib
-Msimg32.lib
+    PUBLIC
+    easyx
+    Dwmapi.lib
+    MSIMG32.LIB
+
+    winmm.lib
 )

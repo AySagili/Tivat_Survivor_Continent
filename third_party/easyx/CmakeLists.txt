@@ -1,15 +1,15 @@
 project(easyx)
 
 add_library(${PROJECT_NAME}
-INTERFACE
+    INTERFACE
 )
 
 target_include_directories(${PROJECT_NAME}
-INTERFACE
-${EASYX_PATH}
+    INTERFACE
+    ${EASYX_PATH}
 )
 
 target_link_libraries(${PROJECT_NAME}
-INTERFACE
-${EASYX_PATH}/libeasyx.a
+    INTERFACE
+    ${EASYX_PATH}/libeasyx.a
 )

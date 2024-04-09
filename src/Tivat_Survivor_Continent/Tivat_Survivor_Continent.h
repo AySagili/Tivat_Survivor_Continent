@@ -158,7 +158,7 @@ public:
     void Hurt(double DAMAGE)
     {
         ENEMY_HEALTH -= DAMAGE;
-        loadimage(&img_health, _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/enemy_health_5.png"));
+        loadimage(&img_health, _T("../package/Teyvat Survivor (Advanced)/img/enemy_health_5.png"));
         putimage_alpha(position.x + (ENEMY_WIDTH / 2 - HEALTH_WIDTH / 2), position.y + 5, &img_health);
 
         if (ENEMY_HEALTH <= 0)

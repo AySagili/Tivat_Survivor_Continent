@@ -86,10 +86,10 @@ void Bullet::Draw() const
 
 Player::Player()
 {
-    loadimage(&img_shadow, (LPCTSTR)("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/shadow_player.png"), 0, 0, false);
-    loadimage(&img_health, (LPCTSTR)("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/enemy_health_5.png"), 0, 0, false);
-    atlas_player_left = new Atlas(_T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/paimon_left_%d.png"), 6);
-    atlas_player_right = new Atlas(_T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/paimon_right_%d.png"), 6);
+    loadimage(&img_shadow, (LPCTSTR)("../package/Teyvat Survivor (Advanced)/img/shadow_player.png"), 0, 0, false);
+    loadimage(&img_health, (LPCTSTR)("../package/Teyvat Survivor (Advanced)/img/enemy_health_5.png"), 0, 0, false);
+    atlas_player_left = new Atlas(_T("../package/Teyvat Survivor (Advanced)/img/paimon_left_%d.png"), 6);
+    atlas_player_right = new Atlas(_T("../package/Teyvat Survivor (Advanced)/img/paimon_right_%d.png"), 6);
     anim_player_left = new Animation(atlas_player_left, 45);
     anim_player_right = new Animation(atlas_player_right, 45);
 }
@@ -187,10 +187,10 @@ void Player::Draw(int delta)
 }
 Enemy::Enemy()
 {
-    loadimage(&img_shadow, (LPCTSTR)("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/shadow_enemy.png"), 0, 0, false);
+    loadimage(&img_shadow, (LPCTSTR)("../package/Teyvat Survivor (Advanced)/img/shadow_enemy.png"), 0, 0, false);
     // loadimage(&img_health, (LPCTSTR)("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/enemy_health_5.png"), 0, 0, false);
-    atlas_enemy_left = new Atlas(_T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/boar_left_%d.png"), 6);
-    atlas_enemy_right = new Atlas(_T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/boar_right_%d.png"), 6);
+    atlas_enemy_left = new Atlas(_T("../package/Teyvat Survivor (Advanced)/img/boar_left_%d.png"), 6);
+    atlas_enemy_right = new Atlas(_T("../package/Teyvat Survivor (Advanced)/img/boar_right_%d.png"), 6);
 
     // atlas_enemy_health = new Atlas(_T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/enemy_health_%d.png"), 6);
 
@@ -426,8 +426,8 @@ void Teyvat_Run()
 
     std::vector<Enemy *> enemy_list;
     std::vector<Bullet> bullet_list(3);
-    loadimage(&img_menu, _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/menu.png"));
-    loadimage(&img_background, _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/background.png"));
+    loadimage(&img_menu, _T("../package/Teyvat Survivor (Advanced)/img/menu.png"));
+    loadimage(&img_background, _T("../package/Teyvat Survivor (Advanced)/img/background.png"));
 
     RECT region_btn_start_game, region_btn_quit_game;
     region_btn_start_game.left = (WINDOW_WIDTH - BUTTON_WIDTH) / 2;
@@ -440,8 +440,8 @@ void Teyvat_Run()
     region_btn_quit_game.top = 550;
     region_btn_quit_game.bottom = region_btn_quit_game.top + BUTTON_HEIGHT;
 
-    StartGameButton btn_quit_game = StartGameButton(region_btn_start_game, _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/ui_start_idle.png"), _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/ui_start_hovered.png"), _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/ui_start_pushed.png"));
-    QuitGameButton btn_start_game = QuitGameButton(region_btn_quit_game, _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/ui_quit_idle.png"), _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/ui_quit_hovered.png"), _T("../Teyvat Survivors/Teyvat Survivor (Advanced)/img/ui_quit_pushed.png"));
+    StartGameButton btn_quit_game = StartGameButton(region_btn_start_game, _T("../package/Teyvat Survivor (Advanced)/img/ui_start_idle.png"), _T("../../package/Teyvat Survivor (Advanced)/img/ui_start_hovered.png"), _T("../../package/Teyvat Survivor (Advanced)/img/ui_start_pushed.png"));
+    QuitGameButton btn_start_game = QuitGameButton(region_btn_quit_game, _T("../package/Teyvat Survivor (Advanced)/img/ui_quit_idle.png"), _T("../../package/Teyvat Survivor (Advanced)/img/ui_quit_hovered.png"), _T("../../package/Teyvat Survivor (Advanced)/img/ui_quit_pushed.png"));
 
     BeginBatchDraw();
     // LoadAnimation();
@@ -482,7 +482,7 @@ void Teyvat_Run()
             {
                 if (enemy->CheckPlayerColetCollision(player))
                 {
-                    PlaySound(_T("../Teyvat Survivors/Teyvat Survivor (Advanced)/mus/hurt.wav"), NULL, SND_ASYNC);
+                    PlaySound(_T("../package/Teyvat Survivor (Advanced)/mus/hurt.wav"), NULL, SND_ASYNC);
                     MessageBox(GetHWnd(), _T("你被野猪创死了！"), _T("游戏结束"), MB_OK);
                     running = false;
                     break;
