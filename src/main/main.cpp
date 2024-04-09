@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-#include <easyx.h>
+
 #include <unistd.h>
 #include <iostream>
 using namespace std;
@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 
-    Teyvat_Run();
+    std::cout << "test" << '\n';
 
     return 0;
 }

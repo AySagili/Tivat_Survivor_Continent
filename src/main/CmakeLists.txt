@@ -12,12 +12,5 @@ target_link_libraries(${PROJECT_NAME}
     process
 )
 
-target_link_libraries(${PROJECT_NAME}
-    PUBLIC
-    easyx
-)
 
-target_link_libraries(${PROJECT_NAME}
-    PUBLIC
-    Tivat_Surivivor_Continent
-)
+

@@ -13,6 +13,7 @@ set(CMAKE_CXX_STANDARD 17)
 # set(PNC_MAP_DIR ${CMAKE_SOURCE_DIR}/src/pnc_map)
 
 # 第三方库
-# set(EASYX_PATH ${CMAKE_SOURCE_DIR}/third_party/easyx)
+set(EASYX_PATH ${CMAKE_SOURCE_DIR}/third_party/easyx)
 add_subdirectory(src)
+
 add_subdirectory(third_party)
